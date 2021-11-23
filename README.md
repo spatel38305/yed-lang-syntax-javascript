@@ -1,0 +1,1 @@
+# yed-lang-syntax-javascript
