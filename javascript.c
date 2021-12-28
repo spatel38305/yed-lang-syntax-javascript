@@ -100,7 +100,7 @@ int yed_plugin_boot(yed_plugin *self) {
                 APOP();
             ENDRANGE("\"");
 
-            RANGE("\'"); ONELINE(); SKIP("\\\\\"");
+            RANGE("\'"); ONELINE(); SKIP("\\\\\'");
                 APUSH("&code-escape");
                     REGEX("\\\\.");
                 APOP();
