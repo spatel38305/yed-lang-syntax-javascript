@@ -89,8 +89,6 @@ int yed_plugin_boot(yed_plugin *self) {
             RANGE("//");
                 ONELINE();
             ENDRANGE("$");
-            RANGE("^[[:space:]]*#[[:space:]]*if[[:space:]]+0"WB);
-            ENDRANGE("^[[:space:]]*#[[:space:]]*(else|endif|elif|elifdef)"WB);
         APOP();
 
         APUSH("&code-string");
@@ -311,7 +309,7 @@ int yed_plugin_boot(yed_plugin *self) {
         APOP();
 
         APUSH("&code-field");
-            REGEXSUB("(\\.|->)[[:space:]]*([[:alpha:]_][[:alnum:]_]*)", 2);
+            REGEXSUB("(\\.)[[:space:]]*([[:alpha:]_][[:alnum:]_]*)", 1);
         APOP();
     ENDSYN();
 
